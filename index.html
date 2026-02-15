@@ -2,10 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AgriTech: AI-Powered Smart Farming System</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+<header>
+    <h1>AgriTech: AI-Powered Smart Farming System</h1>
+    <p>
+        A Research-Based Decision Support System for Crop Disease Detection, 
+        Crop Monitoring, and Market Trend Prediction
+    </p>
+    <p class="author">
+        Ada Khan | Department of Computer Science and Engineering | Manipal University Jaipur
+    </p>
+</header>
+
+<nav>
+    <a href="#abstract">Abstract</a>
+    <a href="#disease">Disease Detection</a>
+    <a href="#monitoring">Crop Monitoring</a>
+    <a href="#market">Market Forecasting</a>
+    <a href="#recommendation">Integrated Report</a>
+</nav>
+
+<section id="abstract" class="section">
+    <h2>Abstract</h2>
+    <p>
+        This system demonstrates an integrated artificial intelligence framework 
+        for agricultural decision support. The platform combines convolutional 
+        neural networks for disease detection, vegetation index analysis for crop 
+        monitoring, and time-series forecasting for agricultural market prediction. 
+        The objective is to enhance productivity, sustainability, and profitability 
+        through data-driven insights.
+    </p>
+</section>
+
+<section id="disease" class="section">
+    <h2>I. Crop Disease Detection Module</h2>
+    <p>Select a leaf image to simulate CNN-based disease classification.</p>
+    <input type="file" id="leafImage">
+    <button onclick="detectDisease()">Run Analysis</button>
+    <div class="output" id="diseaseResult"></div>
+</section>
+
+<section id="monitoring" class="section">
+    <h2>II. Crop Monitoring and Growth Analysis</h2>
+    <p>Simulated vegetation index (NDVI) and crop health evaluation.</p>
+    <button onclick="analyzeCrop()">Evaluate Crop Health</button>
+    <div class="output" id="cropResult"></div>
+</section>
+
+<section id="market" class="section">
+    <h2>III. Market Trend Prediction Module</h2>
+    <p>Select crop commodity for price forecasting.</p>
+    <select id="cropSelect">
+        <option>Apple</option>
+        <option>Rice</option>
+        <option>Wheat</option>
+        <option>Cotton</option>
+    </select>
+    <button onclick="predictPrice()">Forecast Price</button>
+    <div class="output" id="marketResult"></div>
+</section>
+
+<section id="recommendation" class="section">
+    <h2>IV. Integrated Recommendation Report</h2>
+    <button onclick="generateRecommendation()">Generate Final Report</button>
+    <div class="output" id="finalReport"></div>
+</section>
+
+<footer>
+    <p>
+        © 2026 AgriTech Research Prototype | Manipal University Jaipur
+    </p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
