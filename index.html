@@ -5,79 +5,196 @@
     <title>AgriTech: AI-Powered Smart Farming System</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
-    <h1>AgriTech: AI-Powered Smart Farming System</h1>
-    <p>
-        A Research-Based Decision Support System for Crop Disease Detection, 
-        Crop Monitoring, and Market Trend Prediction
-    </p>
+    <h1>AgriTech: AI-Powered Smart Farming System for Disease Detection, Crop Monitoring, and Market Prediction</h1>
+    
     <p class="author">
-        Ada Khan | Department of Computer Science and Engineering | Manipal University Jaipur
+        <strong>Ada Khan</strong><br>
+        Department of Computer Science and Engineering<br>
+        Manipal University Jaipur<br>
+        Under the guidance of Dr. Jeyakrishnan V
     </p>
 </header>
 
 <nav>
     <a href="#abstract">Abstract</a>
-    <a href="#disease">Disease Detection</a>
-    <a href="#monitoring">Crop Monitoring</a>
-    <a href="#market">Market Forecasting</a>
-    <a href="#recommendation">Integrated Report</a>
+    <a href="#keywords">Keywords</a>
+    <a href="#introduction">Introduction</a>
+    <a href="#problem">Problem Statement</a>
+    <a href="#objectives">Objectives</a>
+    <a href="#literature">Literature Review</a>
+    <a href="#methodology">Methodology</a>
+    <a href="#architecture">System Architecture</a>
+    <a href="#results">Results</a>
+    <a href="#discussion">Discussion</a>
+    <a href="#conclusion">Conclusion</a>
 </nav>
 
-<section id="abstract" class="section">
+<section class="section" id="abstract">
     <h2>Abstract</h2>
     <p>
-        This system demonstrates an integrated artificial intelligence framework 
-        for agricultural decision support. The platform combines convolutional 
-        neural networks for disease detection, vegetation index analysis for crop 
-        monitoring, and time-series forecasting for agricultural market prediction. 
-        The objective is to enhance productivity, sustainability, and profitability 
-        through data-driven insights.
+        Agriculture remains the backbone of India’s economy, supporting nearly half of the workforce and contributing significantly to national food security and GDP. However, Indian agriculture continues to suffer from delayed crop disease detection, inefficient monitoring systems, unpredictable weather conditions, and limited access to reliable market intelligence. Traditional farming practices rely heavily on manual observation, which is time-consuming, error-prone, and often ineffective for early-stage disease detection or data-driven decision-making.
+    </p>
+    <p>
+        This research proposes an AI-powered Smart Farming System that integrates deep learning, computer vision, and time-series forecasting techniques to address three critical agricultural challenges: crop disease detection, crop monitoring and growth analysis, and market trend prediction. Convolutional Neural Networks (CNNs) are employed for image-based disease detection, vegetation indices and segmentation methods are used for crop health assessment, and machine learning models such as LSTM and ARIMA are utilized for forecasting crop prices and demand trends. The integrated system provides actionable recommendations to farmers regarding disease management, optimal harvesting time, and profitable crop selection.
+    </p>
+    <p>
+        The proposed framework aims to improve agricultural productivity, sustainability, and profitability through a data-driven approach aligned with the vision of precision agriculture.
     </p>
 </section>
 
-<section id="disease" class="section">
-    <h2>I. Crop Disease Detection Module</h2>
-    <p>Select a leaf image to simulate CNN-based disease classification.</p>
-    <input type="file" id="leafImage">
-    <button onclick="detectDisease()">Run Analysis</button>
-    <div class="output" id="diseaseResult"></div>
+<section class="section" id="keywords">
+    <h2>Keywords</h2>
+    <p>
+        Artificial Intelligence, Smart Agriculture, Deep Learning, CNN, LSTM, Crop Disease Detection, NDVI, Market Forecasting, Precision Farming
+    </p>
 </section>
 
-<section id="monitoring" class="section">
-    <h2>II. Crop Monitoring and Growth Analysis</h2>
-    <p>Simulated vegetation index (NDVI) and crop health evaluation.</p>
-    <button onclick="analyzeCrop()">Evaluate Crop Health</button>
-    <div class="output" id="cropResult"></div>
+<section class="section" id="introduction">
+    <h2>1. Introduction</h2>
+    <p>
+        Agriculture plays a foundational role in India’s socio-economic development. Despite technological advancements in other sectors, farming practices in many regions remain largely traditional. Farmers face recurring challenges such as crop diseases, unpredictable weather, lack of real-time monitoring, and insufficient awareness of market trends. These challenges often result in reduced crop yields, financial instability, and inefficient resource utilization.
+    </p>
+    <p>
+        Manual crop inspection methods are slow and prone to error, particularly when early-stage disease symptoms are subtle. Additionally, market price volatility and insufficient forecasting mechanisms prevent farmers from making informed decisions regarding planting and selling strategies.
+    </p>
+    <p>
+        With advancements in Artificial Intelligence (AI), particularly in deep learning and data analytics, it is now possible to analyze complex agricultural data efficiently. AI-based systems can detect disease patterns from images, evaluate crop health using vegetation indices, and predict market trends using historical time-series data. This research proposes a unified AI-driven smart farming system that integrates these capabilities into a practical and scalable solution.
+    </p>
 </section>
 
-<section id="market" class="section">
-    <h2>III. Market Trend Prediction Module</h2>
-    <p>Select crop commodity for price forecasting.</p>
-    <select id="cropSelect">
-        <option>Apple</option>
-        <option>Rice</option>
-        <option>Wheat</option>
-        <option>Cotton</option>
-    </select>
-    <button onclick="predictPrice()">Forecast Price</button>
-    <div class="output" id="marketResult"></div>
+<section class="section" id="problem">
+    <h2>2. Problem Statement</h2>
+    <p>
+        Indian agriculture faces persistent challenges including delayed disease detection, inaccurate crop health monitoring, and unreliable market insights. Existing AI-based tools often address these issues independently, lacking an integrated and accessible system suitable for practical farming environments.
+    </p>
+    <p>
+        There is a need to develop a comprehensive AI-powered framework capable of:
+    </p>
+    <ul>
+        <li>Automatically detecting crop diseases from leaf or aerial images.</li>
+        <li>Monitoring crop growth stages and health conditions.</li>
+        <li>Forecasting market prices and demand trends.</li>
+        <li>Providing actionable, farmer-friendly recommendations.</li>
+    </ul>
 </section>
 
-<section id="recommendation" class="section">
-    <h2>IV. Integrated Recommendation Report</h2>
-    <button onclick="generateRecommendation()">Generate Final Report</button>
-    <div class="output" id="finalReport"></div>
+<section class="section" id="objectives">
+    <h2>3. Objectives</h2>
+    <ol>
+        <li>To develop a deep learning-based crop disease detection system using CNN architectures.</li>
+        <li>To implement a computer-vision-driven crop monitoring module using vegetation indices and segmentation techniques.</li>
+        <li>To design a machine-learning-based market forecasting model for predicting crop prices and demand trends.</li>
+        <li>To integrate these components into a unified decision-support system.</li>
+    </ol>
+</section>
+
+<section class="section" id="literature">
+    <h2>4. Literature Review</h2>
+    <p>Extensive research has explored AI applications in agriculture.</p>
+    <p>Ferentinos (2018)...</p>
+    <p>Kamilaris and Prenafeta-Boldú (2018)...</p>
+    <p>Too et al. (2019)...</p>
+    <p>Islam et al. (2024)...</p>
+    <p>Dutta et al. (2021)...</p>
+    <p>Pan et al. (2021)...</p>
+    <p>Yi et al. (2020)...</p>
+    <p>Sun et al. (2024)...</p>
+    <p>Dhanaraju et al. (2022)...</p>
+    <p>Dalvi et al. (2024)...</p>
+    <p>While these studies show significant advancements, most focus on isolated problems. The proposed research integrates disease detection, crop monitoring, and market prediction into a unified system.</p>
+</section>
+
+<section class="section" id="methodology">
+    <h2>5. Methodology</h2>
+
+    <h3>5.1 Disease Detection Model</h3>
+    <ul>
+        <li>Dataset Sources: PlantVillage, Rice Leaf Disease Dataset, Cotton Leaf Disease Dataset.</li>
+        <li>Preprocessing: Image resizing, normalization, augmentation (rotation, zoom, flipping).</li>
+        <li>Model Architecture: MobileNet and ResNet50.</li>
+        <li>Training: Transfer Learning using pretrained ImageNet weights.</li>
+        <li>Optimization: Adam optimizer with dropout for regularization.</li>
+        <li>Evaluation Metrics: Accuracy, Precision, Recall, F1-score.</li>
+    </ul>
+
+    <h3>5.2 Crop Monitoring and Growth Analysis</h3>
+    <ul>
+        <li>Vegetation Indices: NDVI, EVI, and GCI.</li>
+        <li>Image Processing: Segmentation and morphological operations.</li>
+        <li>Growth Stage Classification: CNN-based classification.</li>
+        <li>Integration: Soil moisture, temperature, and humidity data (simulated IoT integration).</li>
+    </ul>
+
+    <h3>5.3 Market Trend Prediction</h3>
+    <ul>
+        <li>Data Source: Agmarknet and historical commodity price datasets.</li>
+        <li>Data Processing: Time-series normalization and cleaning.</li>
+        <li>Models: LSTM, ARIMA, Random Forest Regression.</li>
+        <li>Output: Future price trends, demand forecasts, and seasonal variation analysis.</li>
+    </ul>
+
+    <h3>5.4 Recommendation Engine</h3>
+    <ul>
+        <li>Disease status</li>
+        <li>Crop health metrics</li>
+        <li>Market forecasts</li>
+    </ul>
+</section>
+
+<section class="section" id="architecture">
+    <h2>6. System Architecture</h2>
+    <ol>
+        <li>Requirement Analysis</li>
+        <li>Dataset Collection and Preprocessing</li>
+        <li>Disease Detection Model Development</li>
+        <li>Crop Monitoring & Growth Analysis</li>
+        <li>Market Trend Prediction</li>
+        <li>System Integration</li>
+        <li>Testing and Evaluation</li>
+        <li>Deployment and Documentation</li>
+    </ol>
+</section>
+
+<section class="section" id="results">
+    <h2>7. Results and Demonstration</h2>
+    <p>
+        Sample datasets include crop health indicators and apple price records across Indian states (as shown in the dataset screenshots in the synopsis).
+    </p>
+    <p>
+        The system generates disease classification outputs, vegetation index-based health visualization, market price histograms and trend charts, and integrated recommendations.
+    </p>
+    <p>
+        Model evaluation metrics include Classification Accuracy, F1-Score, RMSE for price prediction, and reliability under varied input conditions.
+    </p>
+</section>
+
+<section class="section" id="discussion">
+    <h2>8. Discussion</h2>
+    <p>
+        The integration of computer vision and time-series forecasting provides a holistic approach to smart farming. While CNNs demonstrate high performance in disease classification, real-field robustness remains a challenge due to environmental variability. Market forecasting models capture seasonal patterns but remain sensitive to policy changes and external shocks.
+    </p>
+    <p>
+        Future improvements may include real-time IoT deployment, cloud-based dashboards, larger real-field datasets, and federated learning for privacy-preserving model updates.
+    </p>
+</section>
+
+<section class="section" id="conclusion">
+    <h2>9. Conclusion</h2>
+    <p>
+        This research presents an AI-powered smart farming system integrating disease detection, crop monitoring, and market forecasting into a unified framework. By combining deep learning, vegetation index analysis, and time-series prediction models, the system enables data-driven decision-making for farmers.
+    </p>
+    <p>
+        The proposed solution enhances agricultural productivity, supports sustainable farming practices, and improves profitability through intelligent recommendations. This work contributes toward the advancement of precision agriculture and aligns with India’s vision of digital and smart farming.
+    </p>
 </section>
 
 <footer>
-    <p>
-        © 2026 AgriTech Research Prototype | Manipal University Jaipur
-    </p>
+    © 2026 Ada Khan | AgriTech Smart Farming Research Project
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
