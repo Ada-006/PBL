@@ -9,7 +9,9 @@
 <body>
 
 <header>
-    <h1>AgriTech: AI-Powered Smart Farming System for Disease Detection, Crop Monitoring, and Market Prediction</h1>
+    <h1>
+        AgriTech: AI-Powered Smart Farming System for Disease Detection, Crop Monitoring, and Market Prediction
+    </h1>
     
     <p class="author">
         <strong>Ada Khan</strong><br>
@@ -71,9 +73,7 @@
     <p>
         Indian agriculture faces persistent challenges including delayed disease detection, inaccurate crop health monitoring, and unreliable market insights. Existing AI-based tools often address these issues independently, lacking an integrated and accessible system suitable for practical farming environments.
     </p>
-    <p>
-        There is a need to develop a comprehensive AI-powered framework capable of:
-    </p>
+    <p>There is a need to develop a comprehensive AI-powered framework capable of:</p>
     <ul>
         <li>Automatically detecting crop diseases from leaf or aerial images.</li>
         <li>Monitoring crop growth stages and health conditions.</li>
@@ -95,27 +95,28 @@
 <section class="section" id="literature">
     <h2>4. Literature Review</h2>
     <p>Extensive research has explored AI applications in agriculture.</p>
-    <p>Ferentinos (2018)...</p>
-    <p>Kamilaris and Prenafeta-Boldú (2018)...</p>
-    <p>Too et al. (2019)...</p>
-    <p>Islam et al. (2024)...</p>
-    <p>Dutta et al. (2021)...</p>
-    <p>Pan et al. (2021)...</p>
-    <p>Yi et al. (2020)...</p>
-    <p>Sun et al. (2024)...</p>
-    <p>Dhanaraju et al. (2022)...</p>
-    <p>Dalvi et al. (2024)...</p>
+    <p>Ferentinos (2018) demonstrated that CNN architectures such as VGG and ResNet achieve over 99% accuracy in plant disease detection under controlled environments. However, performance degrades in real-field conditions due to lighting and background variability.</p>
+    <p>Kamilaris and Prenafeta-Boldú (2018) conducted a survey of over 70 deep learning applications in agriculture and concluded that deep learning consistently outperforms classical machine learning approaches. Nevertheless, dataset scarcity and lack of standardization limit generalization.</p>
+    <p>Too et al. (2019) compared VGG19, ResNet50, DenseNet121, and MobileNet architectures. DenseNet121 achieved approximately 99.75% accuracy, while MobileNet was more suitable for mobile-based applications due to lower computational requirements.</p>
+    <p>Islam et al. (2024) proposed a hybrid ResNet50-PSO-SVM model achieving 99.60% accuracy. Although promising, the model was validated primarily on small datasets.</p>
+    <p>Dutta et al. (2021) improved disease detection robustness through transfer learning and data augmentation, achieving over 98% accuracy.</p>
+    <p>Pan et al. (2021) integrated UAV-based multispectral imaging with CNN models to detect wheat yellow rust at early stages, demonstrating the potential of aerial monitoring.</p>
+    <p>Yi et al. (2020) used Sentinel-2 multispectral imagery for crop classification with over 92% accuracy.</p>
+    <p>Sun et al. (2024) developed a hybrid VMD–LSTM model for agricultural price forecasting, outperforming standalone LSTM models by capturing nonlinear seasonal trends.</p>
+    <p>Dhanaraju et al. (2022) explored IoT-based smart agriculture systems and highlighted both their benefits and connectivity challenges.</p>
+    <p>Dalvi et al. (2024) introduced a multi-attribute CNN model for plant recognition, improving robustness through multi-input features.</p>
     <p>While these studies show significant advancements, most focus on isolated problems. The proposed research integrates disease detection, crop monitoring, and market prediction into a unified system.</p>
 </section>
 
 <section class="section" id="methodology">
     <h2>5. Methodology</h2>
+    <p>The proposed system consists of three major modules.</p>
 
     <h3>5.1 Disease Detection Model</h3>
     <ul>
         <li>Dataset Sources: PlantVillage, Rice Leaf Disease Dataset, Cotton Leaf Disease Dataset.</li>
         <li>Preprocessing: Image resizing, normalization, augmentation (rotation, zoom, flipping).</li>
-        <li>Model Architecture: MobileNet and ResNet50.</li>
+        <li>Model Architecture: MobileNet (for lightweight deployment) and ResNet50 (for higher accuracy).</li>
         <li>Training: Transfer Learning using pretrained ImageNet weights.</li>
         <li>Optimization: Adam optimizer with dropout for regularization.</li>
         <li>Evaluation Metrics: Accuracy, Precision, Recall, F1-score.</li>
@@ -142,6 +143,11 @@
         <li>Disease status</li>
         <li>Crop health metrics</li>
         <li>Market forecasts</li>
+        <li>Predicted Disease Type</li>
+        <li>Crop Health Status</li>
+        <li>Predicted Selling Price (₹/quintal)</li>
+        <li>Recommended Harvest Period</li>
+        <li>Estimated Profitability</li>
     </ul>
 </section>
 
@@ -157,19 +163,30 @@
         <li>Testing and Evaluation</li>
         <li>Deployment and Documentation</li>
     </ol>
+    <p>
+        The system is deployed as a local runnable application capable of processing sample inputs and generating structured output reports.
+    </p>
 </section>
 
 <section class="section" id="results">
     <h2>7. Results and Demonstration</h2>
     <p>
-        Sample datasets include crop health indicators and apple price records across Indian states (as shown in the dataset screenshots in the synopsis).
+        Sample datasets include crop health indicators and apple price records across Indian states (as shown in the dataset screenshots in the synopsis Synopsis PBL final).
     </p>
-    <p>
-        The system generates disease classification outputs, vegetation index-based health visualization, market price histograms and trend charts, and integrated recommendations.
-    </p>
-    <p>
-        Model evaluation metrics include Classification Accuracy, F1-Score, RMSE for price prediction, and reliability under varied input conditions.
-    </p>
+    <p>The system generates:</p>
+    <ul>
+        <li>Disease classification outputs.</li>
+        <li>Vegetation index-based health visualization.</li>
+        <li>Market price histograms and trend charts.</li>
+        <li>Integrated recommendations.</li>
+    </ul>
+    <p>Model evaluation metrics include:</p>
+    <ul>
+        <li>Classification Accuracy</li>
+        <li>F1-Score</li>
+        <li>RMSE for price prediction</li>
+        <li>Reliability under varied input conditions</li>
+    </ul>
 </section>
 
 <section class="section" id="discussion">
@@ -177,9 +194,13 @@
     <p>
         The integration of computer vision and time-series forecasting provides a holistic approach to smart farming. While CNNs demonstrate high performance in disease classification, real-field robustness remains a challenge due to environmental variability. Market forecasting models capture seasonal patterns but remain sensitive to policy changes and external shocks.
     </p>
-    <p>
-        Future improvements may include real-time IoT deployment, cloud-based dashboards, larger real-field datasets, and federated learning for privacy-preserving model updates.
-    </p>
+    <p>Future improvements may include:</p>
+    <ul>
+        <li>Real-time IoT deployment</li>
+        <li>Cloud-based dashboards</li>
+        <li>Larger real-field datasets</li>
+        <li>Federated learning for privacy-preserving model updates</li>
+    </ul>
 </section>
 
 <section class="section" id="conclusion">
@@ -193,7 +214,7 @@
 </section>
 
 <footer>
-    © 2026 Ada Khan | AgriTech Smart Farming Research Project
+    © 2026 Ada Khan | AgriTech Research Paper
 </footer>
 
 </body>
