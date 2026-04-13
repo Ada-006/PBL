@@ -13,7 +13,7 @@ async function fetchCropPrices() {
     tableBody.innerHTML = "<tr><td colspan='4' style='text-align:center;'>Loading current market rates...</td></tr>";
 
     try {
-        const API_KEY = "579b464db66ec23bdd000001e51b809c6f26478c529f62b7eeefb029";
+        const API_KEY = "";
    
 
         const url = `https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=579b464db66ec23bdd000001e51b809c6f26478c529f62b7eeefb029&format=json`;
